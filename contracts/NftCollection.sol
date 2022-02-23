@@ -1,7 +1,6 @@
 pragma solidity ^0.6.0;
 pragma experimental ABIEncoderV2;
 
-import "./NftMinting.sol";
 import "./Ownable.sol";
 
 // NFT type define 
