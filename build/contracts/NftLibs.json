@@ -7,13 +7,13 @@
     "absolutePath": "contracts/NftCollection.sol",
     "exportedSymbols": {
       "NftCollection": [
-        266
+        287
       ],
       "NftLibs": [
         100
       ]
     },
-    "id": 267,
+    "id": 288,
     "license": null,
     "nodeType": "SourceUnit",
     "nodes": [
@@ -42,8 +42,8 @@
         "file": "./Ownable.sol",
         "id": 3,
         "nodeType": "ImportDirective",
-        "scope": 267,
-        "sourceUnit": 388,
+        "scope": 288,
+        "sourceUnit": 409,
         "src": "59:23:0",
         "symbolAliases": [],
         "unitAlias": ""
@@ -1445,7 +1445,7 @@
             "visibility": "public"
           }
         ],
-        "scope": 267,
+        "scope": 288,
         "src": "104:1140:0"
       },
       {
@@ -1458,10 +1458,10 @@
               "id": 101,
               "name": "Ownable",
               "nodeType": "UserDefinedTypeName",
-              "referencedDeclaration": 387,
+              "referencedDeclaration": 408,
               "src": "1272:7:0",
               "typeDescriptions": {
-                "typeIdentifier": "t_contract$_Ownable_$387",
+                "typeIdentifier": "t_contract$_Ownable_$408",
                 "typeString": "contract Ownable"
               }
             },
@@ -1471,15 +1471,15 @@
           }
         ],
         "contractDependencies": [
-          387
+          408
         ],
         "contractKind": "contract",
         "documentation": null,
         "fullyImplemented": true,
-        "id": 266,
+        "id": 287,
         "linearizedBaseContracts": [
-          266,
-          387
+          287,
+          408
         ],
         "name": "NftCollection",
         "nodeType": "ContractDefinition",
@@ -1491,7 +1491,7 @@
             "name": "AddressToNftInfos",
             "nodeType": "VariableDeclaration",
             "overrides": null,
-            "scope": 266,
+            "scope": 287,
             "src": "1396:56:0",
             "stateVariable": true,
             "storageLocation": "default",
@@ -1550,7 +1550,7 @@
             "name": "maxSupply",
             "nodeType": "VariableDeclaration",
             "overrides": null,
-            "scope": 266,
+            "scope": 287,
             "src": "1523:20:0",
             "stateVariable": true,
             "storageLocation": "default",
@@ -1595,7 +1595,7 @@
             "name": "numberOfMints",
             "nodeType": "VariableDeclaration",
             "overrides": null,
-            "scope": 266,
+            "scope": 287,
             "src": "1585:24:0",
             "stateVariable": true,
             "storageLocation": "default",
@@ -1640,7 +1640,7 @@
             "name": "gasPay",
             "nodeType": "VariableDeclaration",
             "overrides": null,
-            "scope": 266,
+            "scope": 287,
             "src": "1616:26:0",
             "stateVariable": true,
             "storageLocation": "default",
@@ -2065,7 +2065,7 @@
               "parameters": [],
               "src": "1741:0:0"
             },
-            "scope": 266,
+            "scope": 287,
             "src": "1649:264:0",
             "stateMutability": "nonpayable",
             "virtual": false,
@@ -2307,7 +2307,7 @@
               ],
               "src": "1971:25:0"
             },
-            "scope": 266,
+            "scope": 287,
             "src": "1919:219:0",
             "stateMutability": "view",
             "virtual": false,
@@ -2552,7 +2552,7 @@
                               "name": "owner",
                               "nodeType": "Identifier",
                               "overloadedDeclarations": [],
-                              "referencedDeclaration": 304,
+                              "referencedDeclaration": 325,
                               "src": "2338:5:0",
                               "typeDescriptions": {
                                 "typeIdentifier": "t_function_internal_view$__$returns$_t_address_$",
@@ -2685,7 +2685,7 @@
                               "referencedDeclaration": -28,
                               "src": "2381:4:0",
                               "typeDescriptions": {
-                                "typeIdentifier": "t_contract$_NftCollection_$266",
+                                "typeIdentifier": "t_contract$_NftCollection_$287",
                                 "typeString": "contract NftCollection"
                               }
                             }
@@ -2693,7 +2693,7 @@
                           "expression": {
                             "argumentTypes": [
                               {
-                                "typeIdentifier": "t_contract$_NftCollection_$266",
+                                "typeIdentifier": "t_contract$_NftCollection_$287",
                                 "typeString": "contract NftCollection"
                               }
                             ],
@@ -2819,7 +2819,7 @@
                   "name": "onlyOwner",
                   "nodeType": "Identifier",
                   "overloadedDeclarations": [],
-                  "referencedDeclaration": 314,
+                  "referencedDeclaration": 335,
                   "src": "2277:9:0",
                   "typeDescriptions": {
                     "typeIdentifier": "t_modifier$__$",
@@ -2845,7 +2845,7 @@
               "parameters": [],
               "src": "2287:0:0"
             },
-            "scope": 266,
+            "scope": 287,
             "src": "2248:154:0",
             "stateMutability": "nonpayable",
             "virtual": false,
@@ -2853,9 +2853,9 @@
           },
           {
             "body": {
-              "id": 222,
+              "id": 225,
               "nodeType": "Block",
-              "src": "2457:192:0",
+              "src": "2457:218:0",
               "statements": [
                 {
                   "expression": {
@@ -2962,12 +2962,46 @@
                   "id": 221,
                   "nodeType": "ExpressionStatement",
                   "src": "2541:28:0"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 223,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "nodeType": "UnaryOperation",
+                    "operator": "++",
+                    "prefix": false,
+                    "src": "2652:16:0",
+                    "subExpression": {
+                      "argumentTypes": null,
+                      "id": 222,
+                      "name": "numberOfMints",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 113,
+                      "src": "2652:13:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint32",
+                        "typeString": "uint32"
+                      }
+                    },
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint32",
+                      "typeString": "uint32"
+                    }
+                  },
+                  "id": 224,
+                  "nodeType": "ExpressionStatement",
+                  "src": "2652:16:0"
                 }
               ]
             },
             "documentation": null,
             "functionSelector": "6871ee40",
-            "id": 223,
+            "id": 226,
             "implemented": true,
             "kind": "function",
             "modifiers": [
@@ -3006,32 +3040,230 @@
               "parameters": [],
               "src": "2457:0:0"
             },
-            "scope": 266,
-            "src": "2408:241:0",
+            "scope": 287,
+            "src": "2408:267:0",
             "stateMutability": "payable",
             "virtual": false,
             "visibility": "external"
           },
           {
             "body": {
-              "id": 238,
+              "id": 233,
               "nodeType": "Block",
-              "src": "2751:98:0",
+              "src": "2731:33:0",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 231,
+                    "name": "maxSupply",
+                    "nodeType": "Identifier",
+                    "overloadedDeclarations": [],
+                    "referencedDeclaration": 110,
+                    "src": "2748:9:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint32",
+                      "typeString": "uint32"
+                    }
+                  },
+                  "functionReturnParameters": 230,
+                  "id": 232,
+                  "nodeType": "Return",
+                  "src": "2741:16:0"
+                }
+              ]
+            },
+            "documentation": null,
+            "functionSelector": "4c0f38c2",
+            "id": 234,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getMaxSupply",
+            "nodeType": "FunctionDefinition",
+            "overrides": null,
+            "parameters": {
+              "id": 227,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "2702:2:0"
+            },
+            "returnParameters": {
+              "id": 230,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 229,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 234,
+                  "src": "2725:4:0",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 228,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2725:4:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "2724:6:0"
+            },
+            "scope": 287,
+            "src": "2681:83:0",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 243,
+              "nodeType": "Block",
+              "src": "2825:49:0",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "commonType": {
+                      "typeIdentifier": "t_uint32",
+                      "typeString": "uint32"
+                    },
+                    "id": 241,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftExpression": {
+                      "argumentTypes": null,
+                      "id": 239,
+                      "name": "maxSupply",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 110,
+                      "src": "2842:9:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint32",
+                        "typeString": "uint32"
+                      }
+                    },
+                    "nodeType": "BinaryOperation",
+                    "operator": "-",
+                    "rightExpression": {
+                      "argumentTypes": null,
+                      "id": 240,
+                      "name": "numberOfMints",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 113,
+                      "src": "2854:13:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint32",
+                        "typeString": "uint32"
+                      }
+                    },
+                    "src": "2842:25:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint32",
+                      "typeString": "uint32"
+                    }
+                  },
+                  "functionReturnParameters": 238,
+                  "id": 242,
+                  "nodeType": "Return",
+                  "src": "2835:32:0"
+                }
+              ]
+            },
+            "documentation": null,
+            "functionSelector": "fd02c239",
+            "id": 244,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getRemainingMints",
+            "nodeType": "FunctionDefinition",
+            "overrides": null,
+            "parameters": {
+              "id": 235,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "2796:2:0"
+            },
+            "returnParameters": {
+              "id": 238,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 237,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 244,
+                  "src": "2819:4:0",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 236,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2819:4:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "2818:6:0"
+            },
+            "scope": 287,
+            "src": "2770:104:0",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 259,
+              "nodeType": "Block",
+              "src": "2976:98:0",
               "statements": [
                 {
                   "assignments": [
-                    231
+                    252
                   ],
                   "declarations": [
                     {
                       "constant": false,
-                      "id": 231,
+                      "id": 252,
                       "mutability": "mutable",
                       "name": "nftInfo",
                       "nodeType": "VariableDeclaration",
                       "overrides": null,
-                      "scope": 238,
-                      "src": "2761:31:0",
+                      "scope": 259,
+                      "src": "2986:31:0",
                       "stateVariable": false,
                       "storageLocation": "storage",
                       "typeDescriptions": {
@@ -3040,11 +3272,11 @@
                       },
                       "typeName": {
                         "contractScope": null,
-                        "id": 230,
+                        "id": 251,
                         "name": "NftLibs.NftInfo",
                         "nodeType": "UserDefinedTypeName",
                         "referencedDeclaration": 22,
-                        "src": "2761:15:0",
+                        "src": "2986:15:0",
                         "typeDescriptions": {
                           "typeIdentifier": "t_struct$_NftInfo_$22_storage_ptr",
                           "typeString": "struct NftLibs.NftInfo"
@@ -3054,24 +3286,24 @@
                       "visibility": "internal"
                     }
                   ],
-                  "id": 234,
+                  "id": 255,
                   "initialValue": {
                     "argumentTypes": null,
                     "arguments": [],
                     "expression": {
                       "argumentTypes": [],
-                      "id": 232,
+                      "id": 253,
                       "name": "getNftInfo",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
                       "referencedDeclaration": 169,
-                      "src": "2795:10:0",
+                      "src": "3020:10:0",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_internal_view$__$returns$_t_struct$_NftInfo_$22_storage_ptr_$",
                         "typeString": "function () view returns (struct NftLibs.NftInfo storage pointer)"
                       }
                     },
-                    "id": 233,
+                    "id": 254,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -3079,7 +3311,7 @@
                     "lValueRequested": false,
                     "names": [],
                     "nodeType": "FunctionCall",
-                    "src": "2795:12:0",
+                    "src": "3020:12:0",
                     "tryCall": false,
                     "typeDescriptions": {
                       "typeIdentifier": "t_struct$_NftInfo_$22_storage_ptr",
@@ -3087,25 +3319,25 @@
                     }
                   },
                   "nodeType": "VariableDeclarationStatement",
-                  "src": "2761:46:0"
+                  "src": "2986:46:0"
                 },
                 {
                   "expression": {
                     "argumentTypes": null,
                     "expression": {
                       "argumentTypes": null,
-                      "id": 235,
+                      "id": 256,
                       "name": "nftInfo",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 231,
-                      "src": "2824:7:0",
+                      "referencedDeclaration": 252,
+                      "src": "3049:7:0",
                       "typeDescriptions": {
                         "typeIdentifier": "t_struct$_NftInfo_$22_storage_ptr",
                         "typeString": "struct NftLibs.NftInfo storage pointer"
                       }
                     },
-                    "id": 236,
+                    "id": 257,
                     "isConstant": false,
                     "isLValue": true,
                     "isPure": false,
@@ -3113,22 +3345,22 @@
                     "memberName": "hasStarted",
                     "nodeType": "MemberAccess",
                     "referencedDeclaration": 19,
-                    "src": "2824:18:0",
+                    "src": "3049:18:0",
                     "typeDescriptions": {
                       "typeIdentifier": "t_bool",
                       "typeString": "bool"
                     }
                   },
-                  "functionReturnParameters": 227,
-                  "id": 237,
+                  "functionReturnParameters": 248,
+                  "id": 258,
                   "nodeType": "Return",
-                  "src": "2817:25:0"
+                  "src": "3042:25:0"
                 }
               ]
             },
             "documentation": null,
             "functionSelector": "0b64251e",
-            "id": 239,
+            "id": 260,
             "implemented": true,
             "kind": "function",
             "modifiers": [],
@@ -3136,24 +3368,24 @@
             "nodeType": "FunctionDefinition",
             "overrides": null,
             "parameters": {
-              "id": 224,
+              "id": 245,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "2721:2:0"
+              "src": "2946:2:0"
             },
             "returnParameters": {
-              "id": 227,
+              "id": 248,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 226,
+                  "id": 247,
                   "mutability": "mutable",
                   "name": "",
                   "nodeType": "VariableDeclaration",
                   "overrides": null,
-                  "scope": 239,
-                  "src": "2745:4:0",
+                  "scope": 260,
+                  "src": "2970:4:0",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -3161,10 +3393,10 @@
                     "typeString": "bool"
                   },
                   "typeName": {
-                    "id": 225,
+                    "id": 246,
                     "name": "bool",
                     "nodeType": "ElementaryTypeName",
-                    "src": "2745:4:0",
+                    "src": "2970:4:0",
                     "typeDescriptions": {
                       "typeIdentifier": "t_bool",
                       "typeString": "bool"
@@ -3174,34 +3406,34 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "2744:6:0"
+              "src": "2969:6:0"
             },
-            "scope": 266,
-            "src": "2698:151:0",
+            "scope": 287,
+            "src": "2923:151:0",
             "stateMutability": "view",
             "virtual": false,
             "visibility": "public"
           },
           {
             "body": {
-              "id": 254,
+              "id": 275,
               "nodeType": "Block",
-              "src": "2975:105:0",
+              "src": "3200:105:0",
               "statements": [
                 {
                   "assignments": [
-                    247
+                    268
                   ],
                   "declarations": [
                     {
                       "constant": false,
-                      "id": 247,
+                      "id": 268,
                       "mutability": "mutable",
                       "name": "nftInfo",
                       "nodeType": "VariableDeclaration",
                       "overrides": null,
-                      "scope": 254,
-                      "src": "2985:31:0",
+                      "scope": 275,
+                      "src": "3210:31:0",
                       "stateVariable": false,
                       "storageLocation": "storage",
                       "typeDescriptions": {
@@ -3210,11 +3442,11 @@
                       },
                       "typeName": {
                         "contractScope": null,
-                        "id": 246,
+                        "id": 267,
                         "name": "NftLibs.NftInfo",
                         "nodeType": "UserDefinedTypeName",
                         "referencedDeclaration": 22,
-                        "src": "2985:15:0",
+                        "src": "3210:15:0",
                         "typeDescriptions": {
                           "typeIdentifier": "t_struct$_NftInfo_$22_storage_ptr",
                           "typeString": "struct NftLibs.NftInfo"
@@ -3224,24 +3456,24 @@
                       "visibility": "internal"
                     }
                   ],
-                  "id": 250,
+                  "id": 271,
                   "initialValue": {
                     "argumentTypes": null,
                     "arguments": [],
                     "expression": {
                       "argumentTypes": [],
-                      "id": 248,
+                      "id": 269,
                       "name": "getNftInfo",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
                       "referencedDeclaration": 169,
-                      "src": "3019:10:0",
+                      "src": "3244:10:0",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_internal_view$__$returns$_t_struct$_NftInfo_$22_storage_ptr_$",
                         "typeString": "function () view returns (struct NftLibs.NftInfo storage pointer)"
                       }
                     },
-                    "id": 249,
+                    "id": 270,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -3249,7 +3481,7 @@
                     "lValueRequested": false,
                     "names": [],
                     "nodeType": "FunctionCall",
-                    "src": "3019:12:0",
+                    "src": "3244:12:0",
                     "tryCall": false,
                     "typeDescriptions": {
                       "typeIdentifier": "t_struct$_NftInfo_$22_storage_ptr",
@@ -3257,25 +3489,25 @@
                     }
                   },
                   "nodeType": "VariableDeclarationStatement",
-                  "src": "2985:46:0"
+                  "src": "3210:46:0"
                 },
                 {
                   "expression": {
                     "argumentTypes": null,
                     "expression": {
                       "argumentTypes": null,
-                      "id": 251,
+                      "id": 272,
                       "name": "nftInfo",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 247,
-                      "src": "3048:7:0",
+                      "referencedDeclaration": 268,
+                      "src": "3273:7:0",
                       "typeDescriptions": {
                         "typeIdentifier": "t_struct$_NftInfo_$22_storage_ptr",
                         "typeString": "struct NftLibs.NftInfo storage pointer"
                       }
                     },
-                    "id": 252,
+                    "id": 273,
                     "isConstant": false,
                     "isLValue": true,
                     "isPure": false,
@@ -3283,22 +3515,22 @@
                     "memberName": "publicEnabledShow",
                     "nodeType": "MemberAccess",
                     "referencedDeclaration": 21,
-                    "src": "3048:25:0",
+                    "src": "3273:25:0",
                     "typeDescriptions": {
                       "typeIdentifier": "t_bool",
                       "typeString": "bool"
                     }
                   },
-                  "functionReturnParameters": 243,
-                  "id": 253,
+                  "functionReturnParameters": 264,
+                  "id": 274,
                   "nodeType": "Return",
-                  "src": "3041:32:0"
+                  "src": "3266:32:0"
                 }
               ]
             },
             "documentation": null,
             "functionSelector": "8680d87e",
-            "id": 255,
+            "id": 276,
             "implemented": true,
             "kind": "function",
             "modifiers": [],
@@ -3306,24 +3538,24 @@
             "nodeType": "FunctionDefinition",
             "overrides": null,
             "parameters": {
-              "id": 240,
+              "id": 261,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "2945:2:0"
+              "src": "3170:2:0"
             },
             "returnParameters": {
-              "id": 243,
+              "id": 264,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 242,
+                  "id": 263,
                   "mutability": "mutable",
                   "name": "",
                   "nodeType": "VariableDeclaration",
                   "overrides": null,
-                  "scope": 255,
-                  "src": "2969:4:0",
+                  "scope": 276,
+                  "src": "3194:4:0",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -3331,10 +3563,10 @@
                     "typeString": "bool"
                   },
                   "typeName": {
-                    "id": 241,
+                    "id": 262,
                     "name": "bool",
                     "nodeType": "ElementaryTypeName",
-                    "src": "2969:4:0",
+                    "src": "3194:4:0",
                     "typeDescriptions": {
                       "typeIdentifier": "t_bool",
                       "typeString": "bool"
@@ -3344,32 +3576,32 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "2968:6:0"
+              "src": "3193:6:0"
             },
-            "scope": 266,
-            "src": "2921:159:0",
+            "scope": 287,
+            "src": "3146:159:0",
             "stateMutability": "view",
             "virtual": false,
             "visibility": "public"
           },
           {
             "body": {
-              "id": 264,
+              "id": 285,
               "nodeType": "Block",
-              "src": "3179:28:0",
+              "src": "3404:28:0",
               "statements": [
                 {
                   "expression": {
                     "argumentTypes": null,
                     "hexValue": "74727565",
-                    "id": 262,
+                    "id": 283,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": true,
                     "kind": "bool",
                     "lValueRequested": false,
                     "nodeType": "Literal",
-                    "src": "3196:4:0",
+                    "src": "3421:4:0",
                     "subdenomination": null,
                     "typeDescriptions": {
                       "typeIdentifier": "t_bool",
@@ -3377,16 +3609,16 @@
                     },
                     "value": "true"
                   },
-                  "functionReturnParameters": 261,
-                  "id": 263,
+                  "functionReturnParameters": 282,
+                  "id": 284,
                   "nodeType": "Return",
-                  "src": "3189:11:0"
+                  "src": "3414:11:0"
                 }
               ]
             },
             "documentation": null,
             "functionSelector": "3acde386",
-            "id": 265,
+            "id": 286,
             "implemented": true,
             "kind": "function",
             "modifiers": [],
@@ -3394,18 +3626,18 @@
             "nodeType": "FunctionDefinition",
             "overrides": null,
             "parameters": {
-              "id": 258,
+              "id": 279,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 257,
+                  "id": 278,
                   "mutability": "mutable",
                   "name": "",
                   "nodeType": "VariableDeclaration",
                   "overrides": null,
-                  "scope": 265,
-                  "src": "3143:7:0",
+                  "scope": 286,
+                  "src": "3368:7:0",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -3413,10 +3645,10 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 256,
+                    "id": 277,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
-                    "src": "3143:7:0",
+                    "src": "3368:7:0",
                     "stateMutability": "nonpayable",
                     "typeDescriptions": {
                       "typeIdentifier": "t_address",
@@ -3427,21 +3659,21 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "3142:9:0"
+              "src": "3367:9:0"
             },
             "returnParameters": {
-              "id": 261,
+              "id": 282,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 260,
+                  "id": 281,
                   "mutability": "mutable",
                   "name": "",
                   "nodeType": "VariableDeclaration",
                   "overrides": null,
-                  "scope": 265,
-                  "src": "3173:4:0",
+                  "scope": 286,
+                  "src": "3398:4:0",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -3449,10 +3681,10 @@
                     "typeString": "bool"
                   },
                   "typeName": {
-                    "id": 259,
+                    "id": 280,
                     "name": "bool",
                     "nodeType": "ElementaryTypeName",
-                    "src": "3173:4:0",
+                    "src": "3398:4:0",
                     "typeDescriptions": {
                       "typeIdentifier": "t_bool",
                       "typeString": "bool"
@@ -3462,22 +3694,22 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "3172:6:0"
+              "src": "3397:6:0"
             },
-            "scope": 266,
-            "src": "3119:88:0",
+            "scope": 287,
+            "src": "3344:88:0",
             "stateMutability": "pure",
             "virtual": false,
             "visibility": "public"
           }
         ],
-        "scope": 267,
-        "src": "1246:1963:0"
+        "scope": 288,
+        "src": "1246:2188:0"
       }
     ],
-    "src": "0:3209:0"
+    "src": "0:3434:0"
   },
-  "bytecode": "610381610026600b82828239805160001a60731461001957fe5b30600052607381538281f3fe73000000000000000000000000000000000000000030146080604052600436106100355760003560e01c8063019e08a01461003a575b600080fd5b81801561004657600080fd5b5061005a6100553660046101fa565b610070565b60405161006791906102c5565b60405180910390f35b610078610115565b83518490849084908390829015801590610093575060008151115b80156100a757506001600160a01b03841615155b6100b057600080fd5b6100b8610115565b50506040805160c0810182529889526001600160a01b039097166020808a01919091528751808201895296875288880196909652505084519384019094525050600080825260608401919091526080830181905260a08301525090565b6040805160c0810182526060815260006020820152908101610135610156565b8152602001610142610169565b815260006020820181905260409091015290565b6040518060200160405280606081525090565b6040518060200160405280600081525090565b600082601f83011261018c578081fd5b813567ffffffffffffffff808211156101a3578283fd5b604051601f8301601f1916810160200182811182821017156101c3578485fd5b6040528281529250828483016020018610156101de57600080fd5b8260208601602083013760006020848301015250505092915050565b60008060006060848603121561020e578283fd5b833567ffffffffffffffff80821115610225578485fd5b6102318783880161017c565b9450602086013591506001600160a01b038216821461024e578384fd5b90925060408501359080821115610263578283fd5b506102708682870161017c565b9150509250925092565b60008151808452815b8181101561029f57602081850181015186830182015201610283565b818111156102b05782602083870101525b50601f01601f19169290920160200192915050565b600060208252825160c060208401526102e160e084018261027a565b6020858101516001600160a01b0316604086810191909152860151858303601f190160608701525181835291925061031b9083018261027a565b91505060608401515160808401526080840151151560a084015260a0840151151560c0840152809150509291505056fea2646970667358221220c0b8b8715176595dd41f777fb84b7706af389240382e542f380c86f39b4f8a9364736f6c634300060c0033",
+  "bytecode": "610381610026600b82828239805160001a60731461001957fe5b30600052607381538281f3fe73000000000000000000000000000000000000000030146080604052600436106100355760003560e01c8063019e08a01461003a575b600080fd5b81801561004657600080fd5b5061005a6100553660046101fa565b610070565b60405161006791906102c5565b60405180910390f35b610078610115565b83518490849084908390829015801590610093575060008151115b80156100a757506001600160a01b03841615155b6100b057600080fd5b6100b8610115565b50506040805160c0810182529889526001600160a01b039097166020808a01919091528751808201895296875288880196909652505084519384019094525050600080825260608401919091526080830181905260a08301525090565b6040805160c0810182526060815260006020820152908101610135610156565b8152602001610142610169565b815260006020820181905260409091015290565b6040518060200160405280606081525090565b6040518060200160405280600081525090565b600082601f83011261018c578081fd5b813567ffffffffffffffff808211156101a3578283fd5b604051601f8301601f1916810160200182811182821017156101c3578485fd5b6040528281529250828483016020018610156101de57600080fd5b8260208601602083013760006020848301015250505092915050565b60008060006060848603121561020e578283fd5b833567ffffffffffffffff80821115610225578485fd5b6102318783880161017c565b9450602086013591506001600160a01b038216821461024e578384fd5b90925060408501359080821115610263578283fd5b506102708682870161017c565b9150509250925092565b60008151808452815b8181101561029f57602081850181015186830182015201610283565b818111156102b05782602083870101525b50601f01601f19169290920160200192915050565b600060208252825160c060208401526102e160e084018261027a565b6020858101516001600160a01b0316604086810191909152860151858303601f190160608701525181835291925061031b9083018261027a565b91505060608401515160808401526080840151151560a084015260a0840151151560c0840152809150509291505056fea26469706673582212204d0c5e2d4aba718a61864a025562d320bee8ecb9c98d785d7bb3c3185c2dead864736f6c634300060c0033",
   "bytecodeSha1": "b764e268c9e063f58c857bd39314db49064bda7e",
   "compiler": {
     "evm_version": "istanbul",
@@ -3510,7 +3742,7 @@
     }
   },
   "dependencies": [],
-  "deployedBytecode": "73000000000000000000000000000000000000000030146080604052600436106100355760003560e01c8063019e08a01461003a575b600080fd5b81801561004657600080fd5b5061005a6100553660046101fa565b610070565b60405161006791906102c5565b60405180910390f35b610078610115565b83518490849084908390829015801590610093575060008151115b80156100a757506001600160a01b03841615155b6100b057600080fd5b6100b8610115565b50506040805160c0810182529889526001600160a01b039097166020808a01919091528751808201895296875288880196909652505084519384019094525050600080825260608401919091526080830181905260a08301525090565b6040805160c0810182526060815260006020820152908101610135610156565b8152602001610142610169565b815260006020820181905260409091015290565b6040518060200160405280606081525090565b6040518060200160405280600081525090565b600082601f83011261018c578081fd5b813567ffffffffffffffff808211156101a3578283fd5b604051601f8301601f1916810160200182811182821017156101c3578485fd5b6040528281529250828483016020018610156101de57600080fd5b8260208601602083013760006020848301015250505092915050565b60008060006060848603121561020e578283fd5b833567ffffffffffffffff80821115610225578485fd5b6102318783880161017c565b9450602086013591506001600160a01b038216821461024e578384fd5b90925060408501359080821115610263578283fd5b506102708682870161017c565b9150509250925092565b60008151808452815b8181101561029f57602081850181015186830182015201610283565b818111156102b05782602083870101525b50601f01601f19169290920160200192915050565b600060208252825160c060208401526102e160e084018261027a565b6020858101516001600160a01b0316604086810191909152860151858303601f190160608701525181835291925061031b9083018261027a565b91505060608401515160808401526080840151151560a084015260a0840151151560c0840152809150509291505056fea2646970667358221220c0b8b8715176595dd41f777fb84b7706af389240382e542f380c86f39b4f8a9364736f6c634300060c0033",
+  "deployedBytecode": "73000000000000000000000000000000000000000030146080604052600436106100355760003560e01c8063019e08a01461003a575b600080fd5b81801561004657600080fd5b5061005a6100553660046101fa565b610070565b60405161006791906102c5565b60405180910390f35b610078610115565b83518490849084908390829015801590610093575060008151115b80156100a757506001600160a01b03841615155b6100b057600080fd5b6100b8610115565b50506040805160c0810182529889526001600160a01b039097166020808a01919091528751808201895296875288880196909652505084519384019094525050600080825260608401919091526080830181905260a08301525090565b6040805160c0810182526060815260006020820152908101610135610156565b8152602001610142610169565b815260006020820181905260409091015290565b6040518060200160405280606081525090565b6040518060200160405280600081525090565b600082601f83011261018c578081fd5b813567ffffffffffffffff808211156101a3578283fd5b604051601f8301601f1916810160200182811182821017156101c3578485fd5b6040528281529250828483016020018610156101de57600080fd5b8260208601602083013760006020848301015250505092915050565b60008060006060848603121561020e578283fd5b833567ffffffffffffffff80821115610225578485fd5b6102318783880161017c565b9450602086013591506001600160a01b038216821461024e578384fd5b90925060408501359080821115610263578283fd5b506102708682870161017c565b9150509250925092565b60008151808452815b8181101561029f57602081850181015186830182015201610283565b818111156102b05782602083870101525b50601f01601f19169290920160200192915050565b600060208252825160c060208401526102e160e084018261027a565b6020858101516001600160a01b0316604086810191909152860151858303601f190160608701525181835291925061031b9083018261027a565b91505060608401515160808401526080840151151560a084015260a0840151151560c0840152809150509291505056fea26469706673582212204d0c5e2d4aba718a61864a025562d320bee8ecb9c98d785d7bb3c3185c2dead864736f6c634300060c0033",
   "deployedSourceMap": "104:1140:0:-:0;;;;;;;;;;;;;;;;;;;;;;;;914:328;;;;;;;;;;-1:-1:-1;914:328:0;;;;;:::i;:::-;;:::i;:::-;;;;;;;:::i;:::-;;;;;;;;;1090:14;;:::i;:::-;756:30;;1040:5;;1047:8;;1057:9;;1040:5;;1057:9;;756:34;;;;:90;;;845:1;811:24;:31;:35;756:90;:132;;;;-1:-1:-1;;;;;;866:22:0;;;;756:132;748:141;;;;;;1116:22:::1;;:::i;:::-;-1:-1:-1::0;;1141:70:0::1;::::0;;::::1;::::0;::::1;::::0;;;;;-1:-1:-1;;;;;1141:70:0;;::::1;;::::0;;::::1;::::0;;;;1166:20;;;;::::1;::::0;;;;;1141:70;;;;;;;-1:-1:-1;;1188:8:0;;;;::::1;::::0;;;-1:-1:-1;;;1188:8:0;;;1141:70;;;;;;;;;;;;;;;;;-1:-1:-1;1141:70:0;914:328::o;-1:-1:-1:-;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;:::o;:::-;;;;;;;;;;;;;;:::o;:::-;;;;;;;;;;;;;;:::o;143:442::-;;245:3;238:4;230:6;226:17;222:27;212:2;;-1:-1;;253:12;212:2;300:6;287:20;5126:18;;5118:6;5115:30;5112:2;;;-1:-1;;5148:12;5112:2;4781;4775:9;5221;5202:17;;-1:-1;;5198:33;4807:17;;5289:4;4807:17;4867:34;;;4903:22;;;4864:62;4861:2;;;-1:-1;;4929:12;4861:2;4781;4948:22;393:21;;;313:74;-1:-1;313:74;493:16;;;5289:4;493:16;490:25;-1:-1;487:2;;;528:1;;518:12;487:2;6089:6;5289:4;435:6;431:17;5289:4;469:5;465:16;6066:30;6145:1;5289:4;6136:6;469:5;6127:16;;6120:27;;;;205:380;;;;:::o;593:703::-;;;;751:2;739:9;730:7;726:23;722:32;719:2;;;-1:-1;;757:12;719:2;815:17;802:31;853:18;;845:6;842:30;839:2;;;-1:-1;;875:12;839:2;905:63;960:7;951:6;940:9;936:22;905:63;:::i;:::-;895:73;-1:-1;1005:2;1044:22;;72:20;;-1:-1;;;;;;5862:54;;6602:35;;6592:2;;-1:-1;;6641:12;6592:2;1013:63;;-1:-1;1141:2;1126:18;;1113:32;;1154:30;;;1151:2;;;-1:-1;;1187:12;1151:2;;1217:63;1272:7;1263:6;1252:9;1248:22;1217:63;:::i;:::-;1207:73;;;713:583;;;;;:::o;1530:343::-;;1673:5;5399:12;5554:6;5549:3;5542:19;-1:-1;6234:101;6248:6;6245:1;6242:13;6234:101;;;5591:4;6315:11;;;;;6309:18;6296:11;;;;;6289:39;6263:10;6234:101;;;6350:6;6347:1;6344:13;6341:2;;;-1:-1;5591:4;6406:6;5586:3;6397:16;;6390:27;6341:2;-1:-1;5221:9;6506:14;-1:-1;;6502:28;1829:39;;;;5591:4;1829:39;;1620:253;-1:-1;;1620:253::o;4334:378::-;;4515:2;4536:17;4529:47;2656:16;2650:23;2581:4;4515:2;4504:9;4500:18;2686:38;2739:81;2572:14;4504:9;2572:14;2801:12;2739:81;:::i;:::-;4515:2;2901:16;;;2895:23;-1:-1;;;;;5862:54;2980:14;;;;1372:37;;;;3068:16;;3062:23;3121:14;;;-1:-1;;3121:14;3105;;;3098:38;2156:23;2192:38;;;2731:89;;-1:-1;2245:81;;2077:14;;2156:23;2245:81;:::i;:::-;2348:11;;;3105:14;3339:5;3335:16;3329:23;4088;3454:14;4504:9;3454:14;4285:37;3454:14;3547:5;3543:16;3537:23;5774:13;5767:21;3616:14;4504:9;3616:14;1484:34;3616:14;3716:5;3712:16;3706:23;5774:13;5767:21;2581:4;4504:9;3785:14;1484:34;4582:120;;;;4486:226;;;;:::o",
   "language": "Solidity",
   "natspec": {
@@ -3522,7 +3754,7 @@
     104,
     1244
   ],
-  "opcodes": "PUSH20 0x0 ADDRESS EQ PUSH1 0x80 PUSH1 0x40 MSTORE PUSH1 0x4 CALLDATASIZE LT PUSH2 0x35 JUMPI PUSH1 0x0 CALLDATALOAD PUSH1 0xE0 SHR DUP1 PUSH4 0x19E08A0 EQ PUSH2 0x3A JUMPI JUMPDEST PUSH1 0x0 DUP1 REVERT JUMPDEST DUP2 DUP1 ISZERO PUSH2 0x46 JUMPI PUSH1 0x0 DUP1 REVERT JUMPDEST POP PUSH2 0x5A PUSH2 0x55 CALLDATASIZE PUSH1 0x4 PUSH2 0x1FA JUMP JUMPDEST PUSH2 0x70 JUMP JUMPDEST PUSH1 0x40 MLOAD PUSH2 0x67 SWAP2 SWAP1 PUSH2 0x2C5 JUMP JUMPDEST PUSH1 0x40 MLOAD DUP1 SWAP2 SUB SWAP1 RETURN JUMPDEST PUSH2 0x78 PUSH2 0x115 JUMP JUMPDEST DUP4 MLOAD DUP5 SWAP1 DUP5 SWAP1 DUP5 SWAP1 DUP4 SWAP1 DUP3 SWAP1 ISZERO DUP1 ISZERO SWAP1 PUSH2 0x93 JUMPI POP PUSH1 0x0 DUP2 MLOAD GT JUMPDEST DUP1 ISZERO PUSH2 0xA7 JUMPI POP PUSH1 0x1 PUSH1 0x1 PUSH1 0xA0 SHL SUB DUP5 AND ISZERO ISZERO JUMPDEST PUSH2 0xB0 JUMPI PUSH1 0x0 DUP1 REVERT JUMPDEST PUSH2 0xB8 PUSH2 0x115 JUMP JUMPDEST POP POP PUSH1 0x40 DUP1 MLOAD PUSH1 0xC0 DUP2 ADD DUP3 MSTORE SWAP9 DUP10 MSTORE PUSH1 0x1 PUSH1 0x1 PUSH1 0xA0 SHL SUB SWAP1 SWAP8 AND PUSH1 0x20 DUP1 DUP11 ADD SWAP2 SWAP1 SWAP2 MSTORE DUP8 MLOAD DUP1 DUP3 ADD DUP10 MSTORE SWAP7 DUP8 MSTORE DUP9 DUP9 ADD SWAP7 SWAP1 SWAP7 MSTORE POP POP DUP5 MLOAD SWAP4 DUP5 ADD SWAP1 SWAP5 MSTORE POP POP PUSH1 0x0 DUP1 DUP3 MSTORE PUSH1 0x60 DUP5 ADD SWAP2 SWAP1 SWAP2 MSTORE PUSH1 0x80 DUP4 ADD DUP2 SWAP1 MSTORE PUSH1 0xA0 DUP4 ADD MSTORE POP SWAP1 JUMP JUMPDEST PUSH1 0x40 DUP1 MLOAD PUSH1 0xC0 DUP2 ADD DUP3 MSTORE PUSH1 0x60 DUP2 MSTORE PUSH1 0x0 PUSH1 0x20 DUP3 ADD MSTORE SWAP1 DUP2 ADD PUSH2 0x135 PUSH2 0x156 JUMP JUMPDEST DUP2 MSTORE PUSH1 0x20 ADD PUSH2 0x142 PUSH2 0x169 JUMP JUMPDEST DUP2 MSTORE PUSH1 0x0 PUSH1 0x20 DUP3 ADD DUP2 SWAP1 MSTORE PUSH1 0x40 SWAP1 SWAP2 ADD MSTORE SWAP1 JUMP JUMPDEST PUSH1 0x40 MLOAD DUP1 PUSH1 0x20 ADD PUSH1 0x40 MSTORE DUP1 PUSH1 0x60 DUP2 MSTORE POP SWAP1 JUMP JUMPDEST PUSH1 0x40 MLOAD DUP1 PUSH1 0x20 ADD PUSH1 0x40 MSTORE DUP1 PUSH1 0x0 DUP2 MSTORE POP SWAP1 JUMP JUMPDEST PUSH1 0x0 DUP3 PUSH1 0x1F DUP4 ADD SLT PUSH2 0x18C JUMPI DUP1 DUP2 REVERT JUMPDEST DUP2 CALLDATALOAD PUSH8 0xFFFFFFFFFFFFFFFF DUP1 DUP3 GT ISZERO PUSH2 0x1A3 JUMPI DUP3 DUP4 REVERT JUMPDEST PUSH1 0x40 MLOAD PUSH1 0x1F DUP4 ADD PUSH1 0x1F NOT AND DUP2 ADD PUSH1 0x20 ADD DUP3 DUP2 GT DUP3 DUP3 LT OR ISZERO PUSH2 0x1C3 JUMPI DUP5 DUP6 REVERT JUMPDEST PUSH1 0x40 MSTORE DUP3 DUP2 MSTORE SWAP3 POP DUP3 DUP5 DUP4 ADD PUSH1 0x20 ADD DUP7 LT ISZERO PUSH2 0x1DE JUMPI PUSH1 0x0 DUP1 REVERT JUMPDEST DUP3 PUSH1 0x20 DUP7 ADD PUSH1 0x20 DUP4 ADD CALLDATACOPY PUSH1 0x0 PUSH1 0x20 DUP5 DUP4 ADD ADD MSTORE POP POP POP SWAP3 SWAP2 POP POP JUMP JUMPDEST PUSH1 0x0 DUP1 PUSH1 0x0 PUSH1 0x60 DUP5 DUP7 SUB SLT ISZERO PUSH2 0x20E JUMPI DUP3 DUP4 REVERT JUMPDEST DUP4 CALLDATALOAD PUSH8 0xFFFFFFFFFFFFFFFF DUP1 DUP3 GT ISZERO PUSH2 0x225 JUMPI DUP5 DUP6 REVERT JUMPDEST PUSH2 0x231 DUP8 DUP4 DUP9 ADD PUSH2 0x17C JUMP JUMPDEST SWAP5 POP PUSH1 0x20 DUP7 ADD CALLDATALOAD SWAP2 POP PUSH1 0x1 PUSH1 0x1 PUSH1 0xA0 SHL SUB DUP3 AND DUP3 EQ PUSH2 0x24E JUMPI DUP4 DUP5 REVERT JUMPDEST SWAP1 SWAP3 POP PUSH1 0x40 DUP6 ADD CALLDATALOAD SWAP1 DUP1 DUP3 GT ISZERO PUSH2 0x263 JUMPI DUP3 DUP4 REVERT JUMPDEST POP PUSH2 0x270 DUP7 DUP3 DUP8 ADD PUSH2 0x17C JUMP JUMPDEST SWAP2 POP POP SWAP3 POP SWAP3 POP SWAP3 JUMP JUMPDEST PUSH1 0x0 DUP2 MLOAD DUP1 DUP5 MSTORE DUP2 JUMPDEST DUP2 DUP2 LT ISZERO PUSH2 0x29F JUMPI PUSH1 0x20 DUP2 DUP6 ADD DUP2 ADD MLOAD DUP7 DUP4 ADD DUP3 ADD MSTORE ADD PUSH2 0x283 JUMP JUMPDEST DUP2 DUP2 GT ISZERO PUSH2 0x2B0 JUMPI DUP3 PUSH1 0x20 DUP4 DUP8 ADD ADD MSTORE JUMPDEST POP PUSH1 0x1F ADD PUSH1 0x1F NOT AND SWAP3 SWAP1 SWAP3 ADD PUSH1 0x20 ADD SWAP3 SWAP2 POP POP JUMP JUMPDEST PUSH1 0x0 PUSH1 0x20 DUP3 MSTORE DUP3 MLOAD PUSH1 0xC0 PUSH1 0x20 DUP5 ADD MSTORE PUSH2 0x2E1 PUSH1 0xE0 DUP5 ADD DUP3 PUSH2 0x27A JUMP JUMPDEST PUSH1 0x20 DUP6 DUP2 ADD MLOAD PUSH1 0x1 PUSH1 0x1 PUSH1 0xA0 SHL SUB AND PUSH1 0x40 DUP7 DUP2 ADD SWAP2 SWAP1 SWAP2 MSTORE DUP7 ADD MLOAD DUP6 DUP4 SUB PUSH1 0x1F NOT ADD PUSH1 0x60 DUP8 ADD MSTORE MLOAD DUP2 DUP4 MSTORE SWAP2 SWAP3 POP PUSH2 0x31B SWAP1 DUP4 ADD DUP3 PUSH2 0x27A JUMP JUMPDEST SWAP2 POP POP PUSH1 0x60 DUP5 ADD MLOAD MLOAD PUSH1 0x80 DUP5 ADD MSTORE PUSH1 0x80 DUP5 ADD MLOAD ISZERO ISZERO PUSH1 0xA0 DUP5 ADD MSTORE PUSH1 0xA0 DUP5 ADD MLOAD ISZERO ISZERO PUSH1 0xC0 DUP5 ADD MSTORE DUP1 SWAP2 POP POP SWAP3 SWAP2 POP POP JUMP INVALID LOG2 PUSH5 0x6970667358 0x22 SLT KECCAK256 0xC0 0xB8 0xB8 PUSH18 0x5176595DD41F777FB84B7706AF389240382E SLOAD 0x2F CODESIZE 0xC DUP7 RETURN SWAP12 0x4F DUP11 SWAP4 PUSH5 0x736F6C6343 STOP MOD 0xC STOP CALLER ",
+  "opcodes": "PUSH20 0x0 ADDRESS EQ PUSH1 0x80 PUSH1 0x40 MSTORE PUSH1 0x4 CALLDATASIZE LT PUSH2 0x35 JUMPI PUSH1 0x0 CALLDATALOAD PUSH1 0xE0 SHR DUP1 PUSH4 0x19E08A0 EQ PUSH2 0x3A JUMPI JUMPDEST PUSH1 0x0 DUP1 REVERT JUMPDEST DUP2 DUP1 ISZERO PUSH2 0x46 JUMPI PUSH1 0x0 DUP1 REVERT JUMPDEST POP PUSH2 0x5A PUSH2 0x55 CALLDATASIZE PUSH1 0x4 PUSH2 0x1FA JUMP JUMPDEST PUSH2 0x70 JUMP JUMPDEST PUSH1 0x40 MLOAD PUSH2 0x67 SWAP2 SWAP1 PUSH2 0x2C5 JUMP JUMPDEST PUSH1 0x40 MLOAD DUP1 SWAP2 SUB SWAP1 RETURN JUMPDEST PUSH2 0x78 PUSH2 0x115 JUMP JUMPDEST DUP4 MLOAD DUP5 SWAP1 DUP5 SWAP1 DUP5 SWAP1 DUP4 SWAP1 DUP3 SWAP1 ISZERO DUP1 ISZERO SWAP1 PUSH2 0x93 JUMPI POP PUSH1 0x0 DUP2 MLOAD GT JUMPDEST DUP1 ISZERO PUSH2 0xA7 JUMPI POP PUSH1 0x1 PUSH1 0x1 PUSH1 0xA0 SHL SUB DUP5 AND ISZERO ISZERO JUMPDEST PUSH2 0xB0 JUMPI PUSH1 0x0 DUP1 REVERT JUMPDEST PUSH2 0xB8 PUSH2 0x115 JUMP JUMPDEST POP POP PUSH1 0x40 DUP1 MLOAD PUSH1 0xC0 DUP2 ADD DUP3 MSTORE SWAP9 DUP10 MSTORE PUSH1 0x1 PUSH1 0x1 PUSH1 0xA0 SHL SUB SWAP1 SWAP8 AND PUSH1 0x20 DUP1 DUP11 ADD SWAP2 SWAP1 SWAP2 MSTORE DUP8 MLOAD DUP1 DUP3 ADD DUP10 MSTORE SWAP7 DUP8 MSTORE DUP9 DUP9 ADD SWAP7 SWAP1 SWAP7 MSTORE POP POP DUP5 MLOAD SWAP4 DUP5 ADD SWAP1 SWAP5 MSTORE POP POP PUSH1 0x0 DUP1 DUP3 MSTORE PUSH1 0x60 DUP5 ADD SWAP2 SWAP1 SWAP2 MSTORE PUSH1 0x80 DUP4 ADD DUP2 SWAP1 MSTORE PUSH1 0xA0 DUP4 ADD MSTORE POP SWAP1 JUMP JUMPDEST PUSH1 0x40 DUP1 MLOAD PUSH1 0xC0 DUP2 ADD DUP3 MSTORE PUSH1 0x60 DUP2 MSTORE PUSH1 0x0 PUSH1 0x20 DUP3 ADD MSTORE SWAP1 DUP2 ADD PUSH2 0x135 PUSH2 0x156 JUMP JUMPDEST DUP2 MSTORE PUSH1 0x20 ADD PUSH2 0x142 PUSH2 0x169 JUMP JUMPDEST DUP2 MSTORE PUSH1 0x0 PUSH1 0x20 DUP3 ADD DUP2 SWAP1 MSTORE PUSH1 0x40 SWAP1 SWAP2 ADD MSTORE SWAP1 JUMP JUMPDEST PUSH1 0x40 MLOAD DUP1 PUSH1 0x20 ADD PUSH1 0x40 MSTORE DUP1 PUSH1 0x60 DUP2 MSTORE POP SWAP1 JUMP JUMPDEST PUSH1 0x40 MLOAD DUP1 PUSH1 0x20 ADD PUSH1 0x40 MSTORE DUP1 PUSH1 0x0 DUP2 MSTORE POP SWAP1 JUMP JUMPDEST PUSH1 0x0 DUP3 PUSH1 0x1F DUP4 ADD SLT PUSH2 0x18C JUMPI DUP1 DUP2 REVERT JUMPDEST DUP2 CALLDATALOAD PUSH8 0xFFFFFFFFFFFFFFFF DUP1 DUP3 GT ISZERO PUSH2 0x1A3 JUMPI DUP3 DUP4 REVERT JUMPDEST PUSH1 0x40 MLOAD PUSH1 0x1F DUP4 ADD PUSH1 0x1F NOT AND DUP2 ADD PUSH1 0x20 ADD DUP3 DUP2 GT DUP3 DUP3 LT OR ISZERO PUSH2 0x1C3 JUMPI DUP5 DUP6 REVERT JUMPDEST PUSH1 0x40 MSTORE DUP3 DUP2 MSTORE SWAP3 POP DUP3 DUP5 DUP4 ADD PUSH1 0x20 ADD DUP7 LT ISZERO PUSH2 0x1DE JUMPI PUSH1 0x0 DUP1 REVERT JUMPDEST DUP3 PUSH1 0x20 DUP7 ADD PUSH1 0x20 DUP4 ADD CALLDATACOPY PUSH1 0x0 PUSH1 0x20 DUP5 DUP4 ADD ADD MSTORE POP POP POP SWAP3 SWAP2 POP POP JUMP JUMPDEST PUSH1 0x0 DUP1 PUSH1 0x0 PUSH1 0x60 DUP5 DUP7 SUB SLT ISZERO PUSH2 0x20E JUMPI DUP3 DUP4 REVERT JUMPDEST DUP4 CALLDATALOAD PUSH8 0xFFFFFFFFFFFFFFFF DUP1 DUP3 GT ISZERO PUSH2 0x225 JUMPI DUP5 DUP6 REVERT JUMPDEST PUSH2 0x231 DUP8 DUP4 DUP9 ADD PUSH2 0x17C JUMP JUMPDEST SWAP5 POP PUSH1 0x20 DUP7 ADD CALLDATALOAD SWAP2 POP PUSH1 0x1 PUSH1 0x1 PUSH1 0xA0 SHL SUB DUP3 AND DUP3 EQ PUSH2 0x24E JUMPI DUP4 DUP5 REVERT JUMPDEST SWAP1 SWAP3 POP PUSH1 0x40 DUP6 ADD CALLDATALOAD SWAP1 DUP1 DUP3 GT ISZERO PUSH2 0x263 JUMPI DUP3 DUP4 REVERT JUMPDEST POP PUSH2 0x270 DUP7 DUP3 DUP8 ADD PUSH2 0x17C JUMP JUMPDEST SWAP2 POP POP SWAP3 POP SWAP3 POP SWAP3 JUMP JUMPDEST PUSH1 0x0 DUP2 MLOAD DUP1 DUP5 MSTORE DUP2 JUMPDEST DUP2 DUP2 LT ISZERO PUSH2 0x29F JUMPI PUSH1 0x20 DUP2 DUP6 ADD DUP2 ADD MLOAD DUP7 DUP4 ADD DUP3 ADD MSTORE ADD PUSH2 0x283 JUMP JUMPDEST DUP2 DUP2 GT ISZERO PUSH2 0x2B0 JUMPI DUP3 PUSH1 0x20 DUP4 DUP8 ADD ADD MSTORE JUMPDEST POP PUSH1 0x1F ADD PUSH1 0x1F NOT AND SWAP3 SWAP1 SWAP3 ADD PUSH1 0x20 ADD SWAP3 SWAP2 POP POP JUMP JUMPDEST PUSH1 0x0 PUSH1 0x20 DUP3 MSTORE DUP3 MLOAD PUSH1 0xC0 PUSH1 0x20 DUP5 ADD MSTORE PUSH2 0x2E1 PUSH1 0xE0 DUP5 ADD DUP3 PUSH2 0x27A JUMP JUMPDEST PUSH1 0x20 DUP6 DUP2 ADD MLOAD PUSH1 0x1 PUSH1 0x1 PUSH1 0xA0 SHL SUB AND PUSH1 0x40 DUP7 DUP2 ADD SWAP2 SWAP1 SWAP2 MSTORE DUP7 ADD MLOAD DUP6 DUP4 SUB PUSH1 0x1F NOT ADD PUSH1 0x60 DUP8 ADD MSTORE MLOAD DUP2 DUP4 MSTORE SWAP2 SWAP3 POP PUSH2 0x31B SWAP1 DUP4 ADD DUP3 PUSH2 0x27A JUMP JUMPDEST SWAP2 POP POP PUSH1 0x60 DUP5 ADD MLOAD MLOAD PUSH1 0x80 DUP5 ADD MSTORE PUSH1 0x80 DUP5 ADD MLOAD ISZERO ISZERO PUSH1 0xA0 DUP5 ADD MSTORE PUSH1 0xA0 DUP5 ADD MLOAD ISZERO ISZERO PUSH1 0xC0 DUP5 ADD MSTORE DUP1 SWAP2 POP POP SWAP3 SWAP2 POP POP JUMP INVALID LOG2 PUSH5 0x6970667358 0x22 SLT KECCAK256 0x4D 0xC 0x5E 0x2D 0x4A 0xBA PUSH18 0x8A61864A025562D320BEE8ECB9C98D785D7B 0xB3 0xC3 XOR 0x5C 0x2D 0xEA 0xD8 PUSH5 0x736F6C6343 STOP MOD 0xC STOP CALLER ",
   "pcMap": {
     "0": {
       "offset": [
@@ -6620,8 +6852,8 @@
       "op": "JUMP"
     }
   },
-  "sha1": "44b8f83630eab2d267e53b0cce929fb65c8fc094",
-  "source": "pragma solidity ^0.6.0;\npragma experimental ABIEncoderV2;\n\nimport \"./Ownable.sol\";\n\n// NFT type define \nlibrary NftLibs {\n    /*\n     *  Store a reference to an image, stored in IPFS, in an ethereum smart contract.\n     */\n    struct ImageInfo {\n        string ipfsInfo;\n    }\n\n    struct Price {\n        uint price;\n    }\n\n    struct NftInfo {\n        string nftName;\n        address nftProducer;\n        ImageInfo imageInfo;\n        Price price;\n        bool hasStarted;\n        bool publicEnabledShow;\n    }\n\n    modifier hasMandotaryFields(string memory _name, address _address, string memory _ipfsInfo) {\n        bytes memory tempEmptyNameStringTest = bytes(_name); \n        bytes memory tempEmptyImageStringTest = bytes(_ipfsInfo); \n\n        require(tempEmptyNameStringTest.length > 0 \n                && tempEmptyImageStringTest.length > 0\n                && _address != address(0));\n\n        _;\n    }\n\n    function createNftInfo(string memory _name, address _address, string memory _ipfsInfo) \n            public hasMandotaryFields(_name, _address, _ipfsInfo) \n            returns (NftInfo memory) {\n        NftInfo memory nftInfo = NftInfo(_name, _address, ImageInfo(_ipfsInfo), Price(0), false, false);\n        return nftInfo;\n    }\n}\n\ncontract NftCollection is Ownable {\n    /*\n     * Store all NFT for each address has.\n     * Stores the number of tokens each address has\n     */\n    mapping (address => NftLibs.NftInfo[]) AddressToNftInfos;\n\n    // Stores the maximum number of tokens that you wanna sell.\n    uint32 maxSupply = 0;\n\n    // Stores the remaining mints.\n    uint32 numberOfMints = 0;\n\n    uint gasPay = 0.0001 ether;\n\n    function createToken(string memory _name, address _address, string memory _ipfsInfo) public {\n        NftLibs.NftInfo memory nftInfo = NftLibs.createNftInfo(_name, _address, _ipfsInfo);\n        AddressToNftInfos[_address].push(nftInfo);\n        maxSupply ++;\n    }\n\n    function getNftInfo() private view hasMinted returns(NftLibs.NftInfo storage) {\n        NftLibs.NftInfo[] storage nftInfos = AddressToNftInfos[msg.sender];\n\n        // TODO: Fix bellow.\n        return nftInfos[0];\n    }\n\n    modifier hasMinted() {\n        require(AddressToNftInfos[msg.sender].length > 0);\n        _;\n    }\n\n    function withdraw() external onlyOwner {\n        address payable _owner = address(uint160(owner()));\n        _owner.transfer(address(this).balance);\n    }\n\n    function safeMint() external payable hasMinted() {\n        // Check to make sure gasPay ether was sent to the function call:\n        require(msg.value == gasPay);\n\n        // After get GAS could convert token to Non-Fungible token :)))\n    }\n\n    // Display status if sale has started.\n    function getSaleStarted() public view returns (bool) {\n        NftLibs.NftInfo storage nftInfo = getNftInfo();\n        return nftInfo.hasStarted;\n    }\n\n    // Once public enabled show it and enable mint button for all\n    function getOpenToPublic() public view returns (bool) {\n        NftLibs.NftInfo storage nftInfo = getNftInfo();\n        return nftInfo.publicEnabledShow;\n    }\n\n    // TODO: Implement function.\n    function getOnWhiteList(address) public pure returns (bool) {\n        return true;\n    }\n}",
+  "sha1": "e137bd70471e8282134968defe4ed3c2073e4377",
+  "source": "pragma solidity ^0.6.0;\npragma experimental ABIEncoderV2;\n\nimport \"./Ownable.sol\";\n\n// NFT type define \nlibrary NftLibs {\n    /*\n     *  Store a reference to an image, stored in IPFS, in an ethereum smart contract.\n     */\n    struct ImageInfo {\n        string ipfsInfo;\n    }\n\n    struct Price {\n        uint price;\n    }\n\n    struct NftInfo {\n        string nftName;\n        address nftProducer;\n        ImageInfo imageInfo;\n        Price price;\n        bool hasStarted;\n        bool publicEnabledShow;\n    }\n\n    modifier hasMandotaryFields(string memory _name, address _address, string memory _ipfsInfo) {\n        bytes memory tempEmptyNameStringTest = bytes(_name); \n        bytes memory tempEmptyImageStringTest = bytes(_ipfsInfo); \n\n        require(tempEmptyNameStringTest.length > 0 \n                && tempEmptyImageStringTest.length > 0\n                && _address != address(0));\n\n        _;\n    }\n\n    function createNftInfo(string memory _name, address _address, string memory _ipfsInfo) \n            public hasMandotaryFields(_name, _address, _ipfsInfo) \n            returns (NftInfo memory) {\n        NftInfo memory nftInfo = NftInfo(_name, _address, ImageInfo(_ipfsInfo), Price(0), false, false);\n        return nftInfo;\n    }\n}\n\ncontract NftCollection is Ownable {\n    /*\n     * Store all NFT for each address has.\n     * Stores the number of tokens each address has\n     */\n    mapping (address => NftLibs.NftInfo[]) AddressToNftInfos;\n\n    // Stores the maximum number of tokens that you wanna sell.\n    uint32 maxSupply = 0;\n\n    // Stores the remaining mints.\n    uint32 numberOfMints = 0;\n\n    uint gasPay = 0.0001 ether;\n\n    function createToken(string memory _name, address _address, string memory _ipfsInfo) public {\n        NftLibs.NftInfo memory nftInfo = NftLibs.createNftInfo(_name, _address, _ipfsInfo);\n        AddressToNftInfos[_address].push(nftInfo);\n        maxSupply ++;\n    }\n\n    function getNftInfo() private view hasMinted returns(NftLibs.NftInfo storage) {\n        NftLibs.NftInfo[] storage nftInfos = AddressToNftInfos[msg.sender];\n\n        // TODO: Fix bellow.\n        return nftInfos[0];\n    }\n\n    modifier hasMinted() {\n        require(AddressToNftInfos[msg.sender].length > 0);\n        _;\n    }\n\n    function withdraw() external onlyOwner {\n        address payable _owner = address(uint160(owner()));\n        _owner.transfer(address(this).balance);\n    }\n\n    function safeMint() external payable hasMinted() {\n        // Check to make sure gasPay ether was sent to the function call:\n        require(msg.value == gasPay);\n\n        // After get GAS could convert token to Non-Fungible token :)))\n        numberOfMints ++;\n    }\n\n    function getMaxSupply() public view returns(uint) {\n        return maxSupply;\n    }\n\n    function getRemainingMints() public view returns(uint) {\n        return maxSupply - numberOfMints;\n    }\n\n    // Display status if sale has started.\n    function getSaleStarted() public view returns (bool) {\n        NftLibs.NftInfo storage nftInfo = getNftInfo();\n        return nftInfo.hasStarted;\n    }\n\n    // Once public enabled show it and enable mint button for all\n    function getOpenToPublic() public view returns (bool) {\n        NftLibs.NftInfo storage nftInfo = getNftInfo();\n        return nftInfo.publicEnabledShow;\n    }\n\n    // TODO: Implement function.\n    function getOnWhiteList(address) public pure returns (bool) {\n        return true;\n    }\n}",
   "sourceMap": "104:1140:0:-:0;;;;;;;;;;;;;;;;;;;;;;;;;",
   "sourcePath": "contracts/NftCollection.sol",
   "type": "library"

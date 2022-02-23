@@ -90,11 +90,11 @@ contract NftCollection is Ownable {
         numberOfMints ++;
     }
 
-    function getMaxSupply() view returns(uint) {
+    function getMaxSupply() public view returns(uint) {
         return maxSupply;
     }
 
-    function getRemainingMints() view returns(uint) {
+    function getRemainingMints() public view returns(uint) {
         return maxSupply - numberOfMints;
     }
 
