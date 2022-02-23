@@ -65,26 +65,28 @@ contract NftCollection is Ownable {
         maxSupply ++;
     }
 
-    function getNftInfo() private view hasMinting returns(NftLibs.NftInfo storage) {
+    function getNftInfo() private view hasMinted returns(NftLibs.NftInfo storage) {
         NftLibs.NftInfo[] storage nftInfos = AddressToNftInfos[msg.sender];
 
         // TODO: Fix bellow.
         return nftInfos[0];
     }
 
-    modifier hasMinting() {
+    modifier hasMinted() {
         require(AddressToNftInfos[msg.sender].length > 0);
         _;
-    }
-
-    function payGasForMinting() external payable {
-        // Check to make sure gasPay ether was sent to the function call:
-        require(msg.value == gasPay);
     }
 
     function withdraw() external onlyOwner {
         address payable _owner = address(uint160(owner()));
         _owner.transfer(address(this).balance);
+    }
+
+    function safeMint() external payable hasMinted() {
+        // Check to make sure gasPay ether was sent to the function call:
+        require(msg.value == gasPay);
+
+        // After get GAS could convert token to Non-Fungible token :)))
     }
 
     // Display status if sale has started.
