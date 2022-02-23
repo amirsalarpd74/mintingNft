@@ -1,6 +1,6 @@
-# mintingNft
+# Minting NFT
 
-###Task
+# Task
 Create a minting page for the contract. I dont care so much about design *asuming you will be able to make things look
 a design in the future. But what I would like to see if good user feedback.
 UI should give clear indication to things such as waiting for a traction to finish and a nice 
@@ -9,7 +9,7 @@ Page just needs a button in the center `Connect wallet` which would then change 
 
 
 
-###Requirements
+# Requirements
 Display remaining mints such as xx/xx
 
 Functions:
