@@ -87,6 +87,15 @@ contract NftCollection is Ownable {
         require(msg.value == gasPay);
 
         // After get GAS could convert token to Non-Fungible token :)))
+        numberOfMints ++;
+    }
+
+    getMaxSupply() view returns(uint) {
+        return maxSupply;
+    }
+
+    getRemainingMints() view returns(uint) {
+        return maxSupply - numberOfMints;
     }
 
     // Display status if sale has started.
