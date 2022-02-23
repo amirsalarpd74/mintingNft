@@ -26,25 +26,22 @@ library NftLibs {
         bool publicEnabledShow;
     }
 
-    // TODO: Implement below function after with using "pragma experimental ABIEncoderV2".
-    // function createNftInfo(string memory _name, address _address, string memory _ipfsInfo) 
-    //         public hasMandotaryFields(_name, _address, _ipfsInfo) 
-    //         returns (NftInfo memory) {
-    //     NftInfo memory nftInfo = NftInfo(_name, _address, ImageInfo(_ipfsInfo), Price(0), false, false);
-    //     return nftInfo;
-    // }
-
-    // TODO: convert to modifier function.
-    function hasMandotaryFields(string memory _name, address _address, string memory _ipfsInfo) public returns(bool) {
+    modifier hasMandotaryFields(string memory _name, address _address, string memory _ipfsInfo) {
         bytes memory tempEmptyNameStringTest = bytes(_name); 
         bytes memory tempEmptyImageStringTest = bytes(_ipfsInfo); 
 
-        if (tempEmptyNameStringTest.length > 0 
+        require(tempEmptyNameStringTest.length > 0 
                 && tempEmptyImageStringTest.length > 0
-                && _address != address(0))
-            return true;
+                && _address != address(0));
 
-        return false;
+        _;
+    }
+
+    function createNftInfo(string memory _name, address _address, string memory _ipfsInfo) 
+            public hasMandotaryFields(_name, _address, _ipfsInfo) 
+            returns (NftInfo memory) {
+        NftInfo memory nftInfo = NftInfo(_name, _address, ImageInfo(_ipfsInfo), Price(0), false, false);
+        return nftInfo;
     }
 }
 
@@ -63,16 +60,8 @@ contract NftCollection is Ownable {
 
     uint gasPay = 0.0001 ether;
 
-    function createNftInfo(string memory _name, address _address, string memory _ipfsInfo) 
-            public returns (NftLibs.NftInfo memory) {
-        require(NftLibs.hasMandotaryFields(_name, _address, _ipfsInfo));
-
-        NftLibs.NftInfo memory nftInfo = NftLibs.NftInfo(_name, _address, NftLibs.ImageInfo(_ipfsInfo), NftLibs.Price(0), false, false);
-        return nftInfo;
-    }
-
     function createToken(string memory _name, address _address, string memory _ipfsInfo) public {
-        NftLibs.NftInfo memory nftInfo = createNftInfo(_name, _address, _ipfsInfo);
+        NftLibs.NftInfo memory nftInfo = NftLibs.createNftInfo(_name, _address, _ipfsInfo);
         AddressToNftInfos[_address].push(nftInfo);
         maxSupply ++;
     }
