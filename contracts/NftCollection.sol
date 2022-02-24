@@ -57,37 +57,13 @@ contract NftCollection is Ownable {
     // Stores the remaining mints.
     uint32 numberOfMints = 0;
 
-    uint gasPay = 0.0001 ether;
+    uint gasPay = 0.000001 ether;
 
+    // Public functions
     function createToken(string memory _name, address _address, string memory _ipfsInfo) public {
         NftLibs.NftInfo memory nftInfo = NftLibs.createNftInfo(_name, _address, _ipfsInfo);
         AddressToNftInfos[_address].push(nftInfo);
         maxSupply ++;
-    }
-
-    function getNftInfo() private view hasMinted returns(NftLibs.NftInfo storage) {
-        NftLibs.NftInfo[] storage nftInfos = AddressToNftInfos[msg.sender];
-
-        // TODO: Fix bellow.
-        return nftInfos[0];
-    }
-
-    modifier hasMinted() {
-        require(AddressToNftInfos[msg.sender].length > 0);
-        _;
-    }
-
-    function withdraw() external onlyOwner {
-        address payable _owner = address(uint160(owner()));
-        _owner.transfer(address(this).balance);
-    }
-
-    function safeMint() external payable hasMinted() {
-        // Check to make sure gasPay ether was sent to the function call:
-        require(msg.value == gasPay);
-
-        // After get GAS could convert token to Non-Fungible token :)))
-        numberOfMints ++;
     }
 
     function getMaxSupply() public view returns(uint) {
@@ -114,4 +90,28 @@ contract NftCollection is Ownable {
     function getOnWhiteList(address) public pure returns (bool) {
         return true;
     }
+
+    function safeMint() external payable hasMinted {
+        // Check to make sure gasPay ether was sent to the function call:
+        require(msg.value >= gasPay);
+
+        // After get GAS could convert token to Non-Fungible token :)))
+        address payable _owner = address(uint160(owner()));
+        _owner.transfer(gasPay);
+
+        numberOfMints ++;
+    }
+
+    // Private functions
+    function getNftInfo() private view hasMinted returns(NftLibs.NftInfo storage) {
+        NftLibs.NftInfo[] storage nftInfos = AddressToNftInfos[msg.sender];
+
+        // TODO: Fix bellow.
+        return nftInfos[0];
+    }
+
+    modifier hasMinted() {
+        require(AddressToNftInfos[msg.sender].length > 0);
+        _;
+    } 
 }
