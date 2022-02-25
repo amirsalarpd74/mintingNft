@@ -22,7 +22,6 @@ library NftLibs {
         ImageInfo imageInfo;
         Price price;
         bool hasStarted;
-        bool publicEnabledShow;
     }
 
     modifier hasMandotaryFields(string memory _name, address _address, string memory _ipfsInfo) {
@@ -39,7 +38,7 @@ library NftLibs {
     function createNftInfo(string memory _name, address _address, string memory _ipfsInfo) 
             public hasMandotaryFields(_name, _address, _ipfsInfo) 
             returns (NftInfo memory) {
-        NftInfo memory nftInfo = NftInfo(_name, _address, ImageInfo(_ipfsInfo), Price(0), false, false);
+        NftInfo memory nftInfo = NftInfo(_name, _address, ImageInfo(_ipfsInfo), Price(0), false);
         return nftInfo;
     }
 }
@@ -51,6 +50,17 @@ contract NftCollection is Ownable {
      */
     mapping (address => NftLibs.NftInfo[]) AddressToNftInfos;
 
+    /*
+     * Stores Whitelist on Map structure because dynamic list use more GAS for reallocating.
+     * TODO: For Decreasing GAS usage, we can merge AddressToNftInfos and Whitelist structure.
+     * pre/sale agar whitelist bashad mitavanad befroshad
+     * pre/sale agar whitelist bashad mitavanad befroshad
+     */
+    mapping (address => bool) WhiteList;
+
+    // This parameter declare that minting tokens is public or just for WhiteList groups.
+    bool publicEnabledShow;
+
     // Stores the maximum number of tokens that you wanna sell.
     uint32 maxSupply = 0;
 
@@ -59,7 +69,11 @@ contract NftCollection is Ownable {
 
     uint gasPay = 0.000001 ether;
 
-    // Public functions
+    // Just admin could add address to this whitelist
+    function addToWhiteList(address _address) onlyOwner external {
+        WhiteList[_address] = true;
+    }
+
     function createToken(string memory _name, address _address, string memory _ipfsInfo) public {
         NftLibs.NftInfo memory nftInfo = NftLibs.createNftInfo(_name, _address, _ipfsInfo);
         AddressToNftInfos[_address].push(nftInfo);
@@ -82,16 +96,22 @@ contract NftCollection is Ownable {
 
     // Once public enabled show it and enable mint button for all
     function getOpenToPublic() public view returns (bool) {
-        NftLibs.NftInfo storage nftInfo = getNftInfo();
-        return nftInfo.publicEnabledShow;
+        return publicEnabledShow;
     }
 
-    // TODO: Implement function.
-    function getOnWhiteList(address) public pure returns (bool) {
-        return true;
+    function setOpenToPublic() public onlyOwner returns (bool) {
+        publicEnabledShow = true;
     }
 
-    function safeMint() external payable hasMinted {
+    function setClosedToPublic() public onlyOwner returns (bool) {
+        publicEnabledShow = false;
+    }
+
+    function getOnWhiteList() public view returns (bool) {
+        return WhiteList[msg.sender];
+    }
+
+    function safeMint() external payable hasMinted hasOnWhiteListOrIsPublicEnabledShow {
         // Check to make sure gasPay ether was sent to the function call:
         require(msg.value >= gasPay);
 
@@ -114,4 +134,9 @@ contract NftCollection is Ownable {
         require(AddressToNftInfos[msg.sender].length > 0);
         _;
     } 
+
+    modifier hasOnWhiteListOrIsPublicEnabledShow() {
+        require(getOnWhiteList() || getOpenToPublic());
+        _;
+    }
 }
