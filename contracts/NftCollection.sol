@@ -53,8 +53,6 @@ contract NftCollection is Ownable {
     /*
      * Stores Whitelist on Map structure because dynamic list use more GAS for reallocating.
      * TODO: For Decreasing GAS usage, we can merge AddressToNftInfos and Whitelist structure.
-     * pre/sale agar whitelist bashad mitavanad befroshad
-     * pre/sale agar whitelist bashad mitavanad befroshad
      */
     mapping (address => bool) private WhiteList;
 
