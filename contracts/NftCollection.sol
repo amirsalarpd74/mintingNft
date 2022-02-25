@@ -48,7 +48,7 @@ contract NftCollection is Ownable {
      * Store all NFT for each address has.
      * Stores the number of tokens each address has
      */
-    mapping (address => NftLibs.NftInfo[]) AddressToNftInfos;
+    mapping (address => NftLibs.NftInfo[]) private AddressToNftInfos;
 
     /*
      * Stores Whitelist on Map structure because dynamic list use more GAS for reallocating.
@@ -56,20 +56,31 @@ contract NftCollection is Ownable {
      * pre/sale agar whitelist bashad mitavanad befroshad
      * pre/sale agar whitelist bashad mitavanad befroshad
      */
-    mapping (address => bool) WhiteList;
+    mapping (address => bool) private WhiteList;
 
     // This parameter declare that minting tokens is public or just for WhiteList groups.
-    bool publicEnabledShow;
+    bool private publicEnabledShow = false;
 
     // Stores the maximum number of tokens that you wanna sell.
-    uint32 maxSupply = 0;
+    uint32 private maxSupply = 0;
 
     // Stores the remaining mints.
-    uint32 numberOfMints = 0;
+    uint32 private numberOfMints = 0;
 
-    uint gasPay = 0.000001 ether;
+    // TODO: Could combine bellow paramters in Sale structure for decreasing GAS cost
+    uint32 private preSale = 0;
+    uint32 private publicSale = 0;
 
-    // Just admin could add address to this whitelist
+    uint private gasPay = 0.000001 ether;
+
+    function getNumberOfPreSale() public view returns(uint) {
+        return preSale;
+    }
+
+    function getNumberOfPubliSale() public view returns(uint) {
+        return publicSale;
+    }
+
     function addToWhiteList(address _address) onlyOwner external {
         WhiteList[_address] = true;
     }
@@ -114,6 +125,12 @@ contract NftCollection is Ownable {
     function safeMint() external payable hasMinted hasOnWhiteListOrIsPublicEnabledShow {
         // Check to make sure gasPay ether was sent to the function call:
         require(msg.value >= gasPay);
+
+        if (getOpenToPublic()) {
+            publicSale ++;
+        } else if(getOnWhiteList()) { // Only for more readability writing this condition
+            preSale ++;
+        }
 
         // After get GAS could convert token to Non-Fungible token :)))
         address payable _owner = address(uint160(owner()));

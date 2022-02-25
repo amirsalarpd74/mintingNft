@@ -90,3 +90,55 @@ def test_if_account_1_has_image_and_has_not_minimum_gas_then_contract_should_not
         nft_collection.safeMint({'from':accounts[1]})
 
     assert owner_balance == accounts[0].balance()
+
+def test_if_state_of_contract_on_private_mode_and_address_does_not_exist_in_white_list_then_contract_should_not_execute_safe_mint(nft_collection):
+    owner_balance = accounts[0].balance()
+    customer = accounts[1]
+
+    nft_collection.createToken("Image_1", accounts[1].address, "convert image to ipfs", {'from' : customer})
+
+    with pytest.raises(exceptions.VirtualMachineError):
+        nft_collection.safeMint({'from' : customer})
+
+    assert nft_collection.getNumberOfPreSale() == 0
+    assert nft_collection.getNumberOfPubliSale() == 0
+
+    assert owner_balance == accounts[0].balance()
+
+def test_if_state_of_contract_on_public_mode_and_address_does_not_exist_in_white_list_then_contract_should_execute_safe_mint(nft_collection):
+    owner_balance = accounts[0].balance()
+    owner = accounts[0]
+
+    customer_balance = accounts[1].balance()
+    customer = accounts[1]
+
+    nft_collection.setOpenToPublic({'from':accounts[0]})
+
+    nft_collection.createToken("Image_1", accounts[1].address, "convert image to ipfs", {'from' : customer})
+    nft_collection.safeMint({'from' : customer, 'value':'1 ether'})
+
+    assert nft_collection.getNumberOfPreSale() == 0
+    assert nft_collection.getNumberOfPubliSale() == 1
+
+    assert owner_balance + "0.000001 ether" == owner.balance()
+    assert customer_balance >= accounts[1].balance() + "0.000001 ether"
+
+def test_if_state_of_contract_on_private_mode_and_address_exist_in_white_list_then_contract_should_execute_safe_mint(nft_collection):
+    owner_balance = accounts[0].balance()
+    owner = accounts[0]
+
+    customer_balance = accounts[1].balance()
+    customer = accounts[1]
+    customer_address = customer.address
+
+    nft_collection.setClosedToPublic({'from' : owner})
+    nft_collection.addToWhiteList(customer_address, {'from' : owner})
+
+    nft_collection.createToken("Image_1", customer_address, "convert image to ipfs", {'from' : customer})
+    nft_collection.safeMint({'from' : customer, 'value':'1 ether'})
+
+    assert nft_collection.getNumberOfPreSale() == 1
+    assert nft_collection.getNumberOfPubliSale() == 0
+
+    assert owner_balance + "0.000001 ether" == owner.balance()
+    assert customer_balance >= accounts[1].balance() + "0.000001 ether"
